@@ -19,4 +19,4 @@ spec:
   http:
     - route:
       - destination:
-          host: {{ include "common.names.fullname" . }}.svc.cluster.local
+          host: {{ include "common.names.fullname" . }}.{{ .Release.Namespace }}.svc.cluster.local
